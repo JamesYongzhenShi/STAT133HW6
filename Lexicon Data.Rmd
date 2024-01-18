@@ -1,0 +1,18 @@
+---
+title: "Lexicon Data"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# auxiliary code to download lexicon AFINN
+
+# download lexicon and save it as an "RDS" object
+# (object saved in your working directory)
+library(tidytext)
+afinn = get_sentiments(lexicon ="afinn")
+saveRDS(afinn, file = "afinn.rds")
+```
